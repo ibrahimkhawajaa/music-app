@@ -88,7 +88,7 @@ function App() {
           ))}
         </div>
       ) : (
-        <Loader /> // Display loader if data is not yet loaded
+       <h1>no result found...</h1> // Display loader if data is not yet loaded
       )}
     </div>
   );

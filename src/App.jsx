@@ -68,10 +68,7 @@ function App() {
                 alt=""
                 className="w-60"
                 loading="lazy"
-                onError={(e) => {
-                  e.target.onerror = null; // Prevent infinite loop
-                  e.target.src = "your-placeholder-image-url"; // Placeholder image URL
-                }}
+               
               />
               <h1 className="text-3xl font-Robo">{item.title}</h1>
               <a

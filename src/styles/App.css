@@ -2,74 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-    padding: 0%;
-    margin: auto;
-    box-sizing: border-box;
-    background-color: black;
-    color: white;
-    font-family: "Montserrat", sans-serif;
+body {
+  padding: 0%;
+  margin: auto;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", sans-serif;
 }
-.font-Robo{
-    font-family: "Roboto Condensed", sans-serif;
+.font-Robo {
+  font-family: "Roboto Condensed", sans-serif;
 }
 /*loader*/
 .loader {
-    height: 60px;
-    margin:0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 2/3;
-    --c:no-repeat linear-gradient(#fff 0 0);
-    background: var(--c), var(--c), var(--c), var(--c);
-    background-size: 50% 33.4%;
-    animation: l8 1.5s infinite linear;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 2/3;
+  --c: no-repeat linear-gradient(#fff 0 0);
+  background: var(--c), var(--c), var(--c), var(--c);
+  background-size: 50% 33.4%;
+  animation: l8 1.5s infinite linear;
+}
+@keyframes l8 {
+  0%,
+  5% {
+    background-position: 0 25%, 100% 25%, 0 75%, 100% 75%;
   }
-  @keyframes l8 {
-    0%,
-    5%   {background-position:0 25%,100% 25%,0 75%,100% 75%}
-    33%  {background-position:0 50%,100% 0,0 100%,100% 50%}
-    66%  {background-position:0 50%,0 0,100% 100%,100% 50%}
-    95%,
-    100% {background-position:0 75%,0 25%,100% 75%,100% 25%}
+  33% {
+    background-position: 0 50%, 100% 0, 0 100%, 100% 50%;
   }
-
-
-  /* Style the audio player container */
-audio {
-    width: 90%;
-    height: 40px;
-    color: white; 
-    color: white;
-
+  66% {
+    background-position: 0 50%, 0 0, 100% 100%, 100% 50%;
   }
-  
-  /* Style the audio controls */
-  audio::-webkit-media-controls-panel {
-    border: 1px white solid;
-
-    color: white; /* Background color of the controls */
-    border-radius: 8px; /* Rounded corners for the controls */
+  95%,
+  100% {
+    background-position: 0 75%, 0 25%, 100% 75%, 100% 25%;
   }
-  
-  /* Style individual control buttons */
-  audio::-webkit-media-controls-play-button {
-    /* Styles for the play button */
-
-    color: white;
-
-  }
-  
-  audio::-webkit-media-controls-pause-button {
-    /* Styles for the pause button */
-    color: white;
-  }
-  
-  audio::-webkit-media-controls-volume-slider {
-    /* Styles for the volume slider */
-    background-color: black;
-  }
-  
-  /* Add more styles for other controls as needed */
-  
+}

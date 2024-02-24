@@ -84,9 +84,13 @@ function App() {
       audioRef.current.load();
       audioRef.current.play();
       setIsPlaying(true); // Set isPlaying to true when the song starts playing
+      const img = document.getElementById('audioImg');
+      img.classList.add('animate-spin'); 
     }
   };
   const pauseSong = () => {
+    const img = document.getElementById('audioImg');
+    img.classList.remove('animate-spin');    
     if (currentSong && audioRef.current) {
       audioRef.current.pause();
       setIsPlaying(false); // Set isPlaying to false when the song is paused
@@ -169,7 +173,9 @@ function App() {
                 <img
                   src={currentSong.album.cover_big}
                   alt=""
-                  className="w-20 h-20 rounded-full animate-spin duration-1000"
+
+          id="audioImg"
+                  className=" w-20 h-20 rounded-full animate-spin duration-1000"
                 />
                 <div className="flex flex-col items-start justify-center">
                   <h1 className="text-xl font-Robo">{currentSong.title}</h1>

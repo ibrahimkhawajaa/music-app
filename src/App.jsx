@@ -1,4 +1,5 @@
 import axios from "axios";
+import "./styles/Locomotive.css";
 import { useState, useRef } from "react";
 import {
   AiOutlinePlayCircle,
@@ -84,13 +85,13 @@ function App() {
       audioRef.current.load();
       audioRef.current.play();
       setIsPlaying(true); // Set isPlaying to true when the song starts playing
-      const img = document.getElementById('audioImg');
-      img.classList.add('animate-spin'); 
+      const img = document.getElementById("audioImg");
+      img.classList.add("animate-spin");
     }
   };
   const pauseSong = () => {
-    const img = document.getElementById('audioImg');
-    img.classList.remove('animate-spin');    
+    const img = document.getElementById("audioImg");
+    img.classList.remove("animate-spin");
     if (currentSong && audioRef.current) {
       audioRef.current.pause();
       setIsPlaying(false); // Set isPlaying to false when the song is paused
@@ -98,7 +99,7 @@ function App() {
   };
 
   return (
-    <>
+    <div>
       <Toaster position="top-center" reverseOrder={false} />
       <div className="m-auto h-screen">
         <Navbar />
@@ -173,8 +174,7 @@ function App() {
                 <img
                   src={currentSong.album.cover_big}
                   alt=""
-
-          id="audioImg"
+                  id="audioImg"
                   className=" w-20 h-20 rounded-full animate-spin duration-1000"
                 />
                 <div className="flex flex-col items-start justify-center">
@@ -224,7 +224,7 @@ function App() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

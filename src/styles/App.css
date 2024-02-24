@@ -9,6 +9,7 @@ body {
   background-color: black;
   color: white;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
 }
 .font-Robo {
   font-family: "Roboto Condensed", sans-serif;
